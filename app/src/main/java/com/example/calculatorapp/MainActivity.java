@@ -19,53 +19,60 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
         TextView numberSumTV = findViewById(R.id.resultTV);
+        int num1;
+        int num2;
+        try {
+            num1 = Integer.parseInt((number1ET.getText().toString()));
+            num2 = Integer.parseInt((number2ET.getText().toString()));
+            int sum = num1 + num2;
 
-        int num1 = Integer.parseInt((number1ET.getText().toString()));
-        int num2 = Integer.parseInt((number2ET.getText().toString()));
-        int sum = num1 + num2;
+            numberSumTV.setText("" + sum);
+        }
+        catch(NumberFormatException e){
+            numberSumTV.setText("You didn't enter a number");
+            }
 
-        numberSumTV.setText("" + sum);
     }
 
     public void findDiff(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
-        TextView numberSumTV = findViewById(R.id.resultTV);
+        TextView numberDiffTV = findViewById(R.id.resultTV);
 
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
         int difference = num1 - num2;
 
-        numberSumTV.setText("" + difference);
+        numberDiffTV.setText("" + difference);
     }
 
     public void findProduct(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
-        TextView numberSumTV = findViewById(R.id.resultTV);
+        TextView numberProdTV = findViewById(R.id.resultTV);
 
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
         int product = num1 * num2;
 
-        numberSumTV.setText("" + product);
+        numberProdTV.setText("" + product);
     }
     public void findQuotient(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
-        TextView numberSumTV = findViewById(R.id.resultTV);
+        TextView numberQuotientTV = findViewById(R.id.resultTV);
 
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
         double quotient = num1 / num2;
 
-        numberSumTV.setText("" + quotient);
+        numberQuotientTV.setText("" + quotient);
     }
 
     public void findFactorial(View view) {
         //calculates the factorial of the number given
         EditText number1ET = findViewById(R.id.num1ET);
-        TextView numberSumTV = findViewById(R.id.resultTV);
+        TextView numberFactorialTV = findViewById(R.id.resultTV);
 
         int factorial = Integer.parseInt((number1ET.getText().toString()));
         int num = 1; //starting from 1
@@ -75,6 +82,21 @@ public class MainActivity extends AppCompatActivity {
             num *= i;
         }
         factorial = num;
-        numberSumTV.setText("" + factorial);
+        numberFactorialTV.setText("" + factorial);
+    }
+
+    public void findExponent(View view) {
+        EditText number1ET = findViewById(R.id.num1ET);
+        EditText number2ET = findViewById(R.id.num2ET);
+        TextView numberExpTV = findViewById(R.id.resultTV);
+
+        int num1 = Integer.parseInt((number1ET.getText().toString()));
+        int num2 = Integer.parseInt((number2ET.getText().toString()));
+        int exp = 1;
+        for(int i = 0; i < num2; i++){
+            exp = exp * num1;
+        }
+
+        numberExpTV.setText("" + exp);
     }
 }

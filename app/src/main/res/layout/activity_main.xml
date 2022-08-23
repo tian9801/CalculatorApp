@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightest_green"
-    android:backgroundTint="@color/lightest_green"
+    android:background="@color/mint_blue"
     tools:context=".MainActivity">
 
     <EditText
@@ -62,6 +61,21 @@
         android:onClick="findSum"
         android:text="+"
         android:textColor="@color/medium_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findSum2"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="168dp"
+        android:backgroundTint="@color/light_green"
+        android:onClick="findExponent"
+        android:text="a^b"
+        android:textColor="@color/medium_green"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
