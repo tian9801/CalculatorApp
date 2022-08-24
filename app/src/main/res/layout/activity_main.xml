@@ -11,14 +11,72 @@
         android:id="@+id/num2ET"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="@color/medium_green"
         android:ems="10"
         android:hint="enter number"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findSum2"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="344dp"
+        android:backgroundTint="@color/light_green"
+        android:onClick="findExponent"
+        android:text="a^b"
+        android:textColor="@color/medium_green"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="145dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="464dp"
+        android:text="(for num in slot 1. slot 2 will be ignored)"
+        android:textAlignment="center"
+        android:textColor="@color/medium_green"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findProduct"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/light_green"
+        android:onClick="findProduct"
+        android:text="x"
+        android:textColor="@color/medium_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findSum"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="272dp"
+        android:backgroundTint="@color/light_green"
+        android:onClick="findSum"
+        android:text="+"
+        android:textColor="@color/medium_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,92 +92,7 @@
         android:textColor="@color/dark_green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/resultTV"
-        android:layout_width="68dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="352dp"
-        android:text="answer"
-        android:textAlignment="center"
-        android:textColor="@color/dark_green"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.941"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/findSum"
-        android:layout_width="53dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="240dp"
-        android:backgroundTint="@color/light_green"
-        android:onClick="findSum"
-        android:text="+"
-        android:textColor="@color/medium_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/findSum2"
-        android:layout_width="53dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="168dp"
-        android:backgroundTint="@color/light_green"
-        android:onClick="findExponent"
-        android:text="a^b"
-        android:textColor="@color/medium_green"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/findProduct"
-        android:layout_width="53dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="384dp"
-        android:backgroundTint="@color/light_green"
-        android:onClick="findProduct"
-        android:text="x"
-        android:textColor="@color/medium_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/findQuotient"
-        android:layout_width="53dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="456dp"
-        android:backgroundTint="@color/light_green"
-        android:onClick="findQuotient"
-        android:text="÷"
-        android:textColor="@color/medium_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/findFactorial"
-        android:layout_width="53dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="524dp"
-        android:backgroundTint="@color/light_green"
-        android:onClick="findFactorial"
-        android:text="!"
-        android:textColor="@color/medium_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -127,26 +100,55 @@
         android:id="@+id/findDifference"
         android:layout_width="53dp"
         android:layout_height="49dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="344dp"
         android:backgroundTint="@color/light_green"
         android:onClick="findDiff"
         android:text="-"
         android:textColor="@color/medium_green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findFactorial"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="416dp"
+        android:backgroundTint="@color/light_green"
+        android:onClick="findFactorial"
+        android:text="!"
+        android:textColor="@color/medium_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findQuotient"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="272dp"
+        android:backgroundTint="@color/light_green"
+        android:onClick="findQuotient"
+        android:text="÷"
+        android:textColor="@color/medium_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="145dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="532dp"
-        android:text="(for num in slot 1. slot 2 will be ignored)"
+        android:id="@+id/resultTV"
+        android:layout_width="371dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="32dp"
+        android:text="answer"
         android:textAlignment="center"
-        android:textColor="@color/medium_green"
+        android:textColor="@color/dark_green"
+        android:textSize="50sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.729"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
