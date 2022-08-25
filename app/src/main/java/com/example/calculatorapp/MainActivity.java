@@ -112,12 +112,14 @@ public class MainActivity extends AppCompatActivity {
         //calculates the factorial of the number given in slot 1
         EditText number1ET = findViewById(R.id.num1ET);
         TextView numberFactorialTV = findViewById(R.id.resultTV);
+        int original;
         int num;
         int factorial;
         //try catch block to prevent crashes if the item the user entered is not an integer
         try {
             //check if entered values are ints
             factorial = Integer.parseInt((number1ET.getText().toString()));
+            original = factorial;
             num = 1; //starting from 1
             for(int i = factorial; i > 0; i--){
                 //the num entered, factorial, is the beginning num. for each iteration of the loop, it is multiplied
@@ -125,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 num *= i;
             }
             factorial = num;
-            numberFactorialTV.setText("" + num + "! = " + factorial);
+            numberFactorialTV.setText("" + original + "! = " + factorial);
             //displays full calculation
         }
         catch(NumberFormatException e){
